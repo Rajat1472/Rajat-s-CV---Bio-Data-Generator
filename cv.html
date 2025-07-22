@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Form</title>
+        <script>
+     function isExperience()
+        {
+            let expCheckbox=document.getElementById("expCheckbox")
+            let expDiv=document.getElementById("experienceFeilds");
+            
+            if(expCheckbox.checked)
+        {
+
+            expDiv.style.display="block";
+        }
+        else{
+            expDiv.style.display="none";
+        }
+        }
+        
+    </script>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .skill-container {
+            margin-bottom: 10px;
+        }
+        .remove-btn {
+            margin-left: 10px;
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+
+    <style>
+        
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, cyan, blue);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        form
+        {
+            background: rgba(65, 51, 132, 0.66), green, blue, alpha;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+            }
+            input,select{
+            width: 100%;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-weight: bolder;
+        }
+            input[type="submit"]{
+                background: gold;
+                color: white;
+                cursor: pointer;
+                font-size: 20px;
+            }
+            input[type="submit"]:hover{
+                background: purple;
+            }
+            .add-btn {
+    background-color: darkgreen;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 5px;
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: seagreen;
+}
+
+
+    </style>
+    
+</head>
+<body>
+    <h1>Welcome to CV Form</h1>
+<p>Kindly Fill the follwing details required.</p> 
+<form onsubmit="submitCV(event)">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required><br><br>
+<label for="fname">Father's Name</label>
+<input type="text" id="fname" name="Fathers Name" required><br><br>
+<label for="dob">Date of Birth</label>
+<input type="date" id="dob" name="dob" required><br><br>
+<div id="skillsContainer">
+<label for="skills">Skills:</label>
+<input type="text" name="skills" required><br><br>
+<button type="button" class="add-btn" onclick="addSkills()">Add Skills.</button></div><br><br>
+<label for="phone">Contact:</label>
+<input type="number" id="phone" name="phone" required><br><br>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required><br><br>
+<label for="Country">Country</label><br><br>
+<input list="countries" id="country" name="country" required>
+<datalist id="countries">
+    <option value="Afghanistan">
+    <option value="Albania">
+    <option value="Algeria">
+    <option value="Andorra">
+    <option value="Angola">
+    <option value="Argentina">
+    <option value="Armenia">
+    <option value="Australia">
+    <option value="Austria">
+    <option value="Azerbaijan">
+    <option value="Bahamas">
+    <option value="Bahrain">
+    <option value="Bangladesh">
+    <option value="Barbados">
+    <option value="Belarus">
+    <option value="Belgium">
+    <option value="Bhutan">
+    <option value="Bolivia">
+    <option value="Brazil">
+    <option value="Bulgaria">
+    <option value="Canada">
+    <option value="China">
+    <option value="Colombia">
+    <option value="Croatia">
+    <option value="Cuba">
+    <option value="Denmark">
+    <option value="Egypt">
+    <option value="Finland">
+    <option value="France">
+    <option value="Germany">
+    <option value="Greece">
+    <option value="Hungary">
+    <option value="Iceland">
+    <option value="India">
+    <option value="Indonesia">
+    <option value="Iran">
+    <option value="Iraq">
+    <option value="Ireland">
+    <option value="Israel">
+    <option value="Italy">
+    <option value="Jamaica">
+    <option value="Japan">
+    <option value="Kazakhstan">
+    <option value="Kenya">
+    <option value="Malaysia">
+    <option value="Mexico">
+    <option value="Nepal">
+    <option value="Netherlands">
+    <option value="New Zealand">
+    <option value="Nigeria">
+    <option value="North Korea">
+    <option value="Norway">
+    <option value="Pakistan">
+    <option value="Peru">
+    <option value="Philippines">
+    <option value="Poland">
+    <option value="Portugal">
+    <option value="Qatar">
+    <option value="Russia">
+    <option value="Saudi Arabia">
+    <option value="South Africa">
+    <option value="South Korea">
+    <option value="Spain">
+    <option value="Sri Lanka">
+    <option value="Sweden">
+    <option value="Switzerland">
+    <option value="Thailand">
+    <option value="Turkey">
+    <option value="United Arab Emirates">
+    <option value="United Kingdom">
+    <option value="United States">
+    <option value="Vietnam">
+    <option value="Zimbabwe">
+</datalist><br>
+<label for="state">State</label>
+<input list="states" id="state" name="state" >
+
+<datalist id="states">
+    <option value="Andhra Pradesh">
+    <option value="Arunachal Pradesh">
+    <option value="Assam">
+    <option value="Bihar">
+    <option value="Chhattisgarh">
+    <option value="Goa">
+    <option value="Gujarat">
+    <option value="Haryana">
+    <option value="Himachal Pradesh">
+    <option value="Jharkhand">
+    <option value="Karnataka">
+    <option value="Kerala">
+    <option value="Madhya Pradesh">
+    <option value="Maharashtra">
+    <option value="Manipur">
+    <option value="Meghalaya">
+    <option value="Mizoram">
+    <option value="Nagaland">
+    <option value="Odisha">
+    <option value="Punjab">
+    <option value="Rajasthan">
+    <option value="Sikkim">
+    <option value="Tamil Nadu">
+    <option value="Telangana">
+    <option value="Tripura">
+    <option value="Uttar Pradesh">
+    <option value="Uttarakhand">
+    <option value="West Bengal">
+    
+    <!-- Union Territories -->
+    <option value="Andaman and Nicobar Islands">
+    <option value="Chandigarh">
+    <option value="Dadra and Nagar Haveli and Daman and Diu">
+    <option value="Lakshadweep">
+    <option value="Delhi">
+    <option value="Puducherry">
+    <option value="Ladakh">
+    <option value="Jammu and Kashmir">
+</datalist>
+
+<label for="Address">Address</label><br><br>
+<input type="text" id="Address" name="Address" required><br><br>
+<div id="educationContainer"><label for="Education">Education</label><br><br>
+<input type="text" id="Education" name="Education"required><br><br>
+<button type="button" class="add-btn" onclick="addEducation()">Add other courses.</button></div><br><br>
+<label for="cv_feild">Select your Feild</label>
+<select id="cv_feild" name="CV_FEILD" required>
+    <option value="">Select Feild</option>
+    <option value="IT">IT & Software</option>
+    <option value="Engineer">Engineer</option>
+    <option value="Medical">Medical & Healthcare</option>
+    <option value="Education">Education & Teaching</option>
+    <option value="Finance">Finance & Accounting</option>
+    <option value="Marketing">Marketing & Sales</option>
+    <option value="HR">Human Resource(HR)</option>
+    <option value="Design">Graphic & UI/UX Design</option>
+    <option value="Legal">Legal & Law</option>
+    <option value="Management">Business Management</option>
+    <option value="Government">Government Jobs</option>
+    <option value="Freelancing">Freelancing & Entrepreneurship</option>
+</select>
+<label for="class10">10th School Name:</label>
+    <input type="text" id="class10" placeholder="Enter 10th school name" required>
+
+<label for="class12">12th School Name:</label>
+    <input type="text" id="class12" placeholder="Enter 12th school name" required>
+    <label for="lang">Enter Languages Known</label>
+    <input type="text" id="lang" name="lang" placeholder="Enter Languages Known" required>
+    <label for="Marital">Marital Status</label>
+<select id="Marital" name="marital_status" required>
+    <option value="">Select</option>
+    <option value="Unmarried">Unmarried</option>
+    <option value="Married">Married</option>
+    <option value="Divorced">Divorced</option>
+</select><br><br>
+<label for="photo">Upload Your Photo</label><br><br>
+<input type="file" id="photo" accept="image"><br><br>
+<img id="preview" src="" alt="Photo Preview" style="max-width: 150px; display: none; border: 1px solid black;padding: 4px;">
+<label for="expCheckbox">Do you have experience?</label>
+<input type="checkbox" id="expCheckbox" onclick="isExperience()">
+<div id="experienceFeilds" style="display: none;">
+    <label for="Company">Last Company Name</label>
+    <input type="text" id="Company" name="company_name"><br><br>
+    <label for="Years">Years of Experience</label>
+    <input type="number" id="Years" name="years" ><br><br>
+</div><br>
+<input type="submit"value="submit">
+<script>
+    function redirectToCV() {
+        window.location.href = "Demo.html";
+    }
+    </script>
+    </form>   
+    <script>
+        function submitCV(event) {
+            event.preventDefault(); // Form submit hone se rokna
+    
+            // Form se data lena
+            let formData = {
+                name: document.getElementById("name").value,
+                fname: document.getElementById("fname").value,
+                dob: document.getElementById("dob").value,
+                phone:document.getElementById("phone").value,
+                email: document.getElementById("email").value,
+                skills: Array.from(document.getElementsByName("skills")).map(input => input.value),
+                country: document.getElementById("country").value,
+                state: document.getElementById("state").value,
+                house: document.getElementById("Address").value,
+                education: Array.from(document.getElementsByName("Education")).map(input => input.value),
+                class10: document.getElementById("class10").value,
+                class12: document.getElementById("class12").value,
+                field: document.getElementById("cv_feild").value,
+                lang: document.getElementById("lang").value,
+                Marital: document.getElementById("Marital").value,
+                experience: document.getElementById("expCheckbox").checked ? {
+                    company: document.getElementById("Company").value,
+                    years: document.getElementById("Years").value
+                } : null
+            };
+    
+            // Data ko localStorage mein save karna
+            localStorage.setItem("cvData", JSON.stringify(formData));
+    
+            // CV preview page par le jana
+            window.location.href = "Demo.html";
+                    }
+
+                    const photoInput=document.getElementById("photo");
+                    const previewImage=document.getElementById("preview");
+                    photoInput.addEventListener("change", function(){
+                        const file=this.files[0];
+                        if(file){
+                            const reader= new FileReader();
+                            reader.onload=function(){
+                                previewImage.src= reader.result;
+                                previewImage.style.display="block";
+                                localStorage.setItem("cvPhoto",reader.result);
+                                
+                            }
+                            reader.readAsDataURL(file);
+                        }
+                        
+                    })
+                    function addEducation() {
+    const container = document.getElementById("educationContainer");
+
+    const wrapperDiv = document.createElement("div");
+    wrapperDiv.style.display = "flex";
+    wrapperDiv.style.alignItems = "center";
+    wrapperDiv.style.gap = "10px";
+    wrapperDiv.style.marginTop = "5px";
+
+    // Create the input field
+    const input = document.createElement("input");
+    input.type = "text";
+    input.name = "Education";
+    input.placeholder = "Enter other course or qualification";
+    input.required = true;
+    input.style.flex = "1";
+
+    // Create the remove button
+    const removeBtn = document.createElement("button");
+    removeBtn.type = "button";
+    removeBtn.textContent = "❌ Remove";
+    removeBtn.style.backgroundColor = "crimson";
+    removeBtn.style.color = "white";
+    removeBtn.style.border = "none";
+    removeBtn.style.padding = "5px 10px";
+    removeBtn.style.borderRadius = "5px";
+    removeBtn.style.cursor = "pointer";
+
+    // Remove logic
+    removeBtn.onclick = () => {
+        container.removeChild(wrapperDiv);
+    };
+
+    // Append input and button to wrapperDiv, then to container
+    wrapperDiv.appendChild(input);
+    wrapperDiv.appendChild(removeBtn);
+    container.appendChild(wrapperDiv);
+}
+function addSkills(){
+    console.log("Hi Enter new skill")
+    const container=document.getElementById("skillsContainer");
+    const wrapper=document.createElement("div");
+    wrapper.style.display="flex";
+    wrapper.style.alignItems="center";
+    wrapper.style.gap="10px";
+    wrapper.style.marginBottom="8px";
+    const input=document.createElement("input");
+    input.type="text";
+    input.name="skills";
+    input.placeholder="Enter another skill";
+    input.required="true";
+    input.style.flex="1";
+    const removeBtn=document.createElement("button");
+    removeBtn.type="button";
+    removeBtn.textContent="❌ Remove";
+    removeBtn.style.backgroundColor="crimson";
+    removeBtn.style.color="white";
+    removeBtn.style.border="none";
+    removeBtn.style.padding="5px 10px";
+    removeBtn.style.cursor="pointer";
+    removeBtn.onclick= ()=>{
+        container.removeChild(wrapper);
+    }
+    wrapper.appendChild(input);
+    wrapper.appendChild(removeBtn);
+    container.appendChild(wrapper);
+}
+    </script>
+<Script src="cvScript.js"></Script>    
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Design</title>
+    <style>
+        /* Reset and basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f4f8;
+  padding: 40px 0;
+  color: #333;
+}
+
+/* CV Container */
+.cv-wrapper {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+/* Left sidebar */
+.cv-left {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 40px 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.cv-left h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.cv-left p {
+  margin: 6px 0;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* Right main content */
+.cv-right {
+  padding: 40px 50px;
+  flex-grow: 1;
+}
+
+.cv-section {
+  margin-bottom: 30px;
+}
+
+.cv-section h2 {
+  font-size: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.cv-section p,
+.cv-section ul {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.cv-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.cv-section ul li {
+  margin-bottom: 8px;
+}
+#photoContainer{
+  height: 170px;
+  width: 120px;
+  margin: 0 auto;
+  border-radius: 5px;
+  
+}
+#cvPhoto{
+  height: 150px;
+  width: 120px;
+border: 2px solid black;
+}
+#print {
+  margin: 30px auto;
+  display: block;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+    </style>
+    
+</head>
+<body>
+
+<div class="cv-wrapper">
+  <aside class="cv-left">
+    <div id="photoContainer"><img src="" alt="" id="cvPhoto"></div>
+    <h1 id="intro">Your Name</h1>
+    <p id="cvField">Your Profession</p>
+    <p id="cvEmail">your@email.com</p>
+    <p id="cvPhone">+91 9876543210</p>
+    <p id="address">Your Address</p>
+  </aside>
+
+  <main class="cv-right">
+    <section class="cv-section">
+      <h2>Career Objective</h2>
+      <p id="cvCareerObjective">Your Career Objective</p>
+    </section>
+
+    <section class="cv-section">
+      <h2>Education</h2>
+      <ul id="cvEducation"></ul>
+        <ul>
+        <li id="class12"><b>Intermediate</b> (Year) - Institution Name</li>
+        <li id="class10"><b>High School</b> (Year) - Institution Name</li>
+        </ul>
+    </section>
+
+    <section class="cv-section">
+      <h2>Experience</h2>
+      <p id="cvExperience">Fresher / Experience Details</p>
+    </section>
+
+    <section class="cv-section">
+      <h2>Skills</h2>
+      <p id="cvSkills">Skill 1, Skill 2, Skill 3</p>
+    </section>
+
+    <section class="cv-section">
+      <h2>Personal Details</h2>
+      <ul>
+        <li id="cvDob">Date of Birth: DD/MM/YYYY</li>
+        <li id="cvFather">Father's Name: XYZ</li>
+        <li id="cvMarital">Marital Status: Single</li>
+        <li id="cvlang">Languages: Hindi, English</li>
+        <li id="cvCountry">Country: India</li>
+        <li id="cvState">State: Your State</li>
+      </ul>
+    </section>
+  </main>
+</div>
+<button id="print" onclick="window.print()">🖨 Print / 📩 Download PDF</button>
+<script src="cvScript.js"></script>
+      
+</body>
+</html>

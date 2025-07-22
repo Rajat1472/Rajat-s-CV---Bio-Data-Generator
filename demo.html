@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Preview</title>
+    <style>
+        #preview{
+            text-align: center;
+            color: blue;
+          
+        }
+        /* General container for all CV previews */
+        .cv-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+          
+        }
+
+        /* Style for each CV preview box */
+        .cv-preview {
+            width: 150px; /* Initial small size */
+            height: 200px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          
+        }
+
+        /* Hover effect to make it bigger */
+        .cv-preview:hover {
+            transform: scale(1.2); /* 20% bigger */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow for effect */
+        }
+
+        /* Inside content of the preview */
+        .cv-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* To keep the image from stretching */
+        }
+
+        /* Add any other styles for content inside preview */
+        iframe{
+          pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="preview">Preview of Curriculum Vitae</h2>
+    <div class="cv-container">
+        <!-- Preview items for 10 CVs -->
+        <a href="CV Design.html"  >
+        <div class="cv-preview">
+          <div style="width:150px; height:200px; overflow:hidden; border-radius:10px; border:2px solid black;">
+              <iframe 
+                src="CV Design.html" 
+                style="width:800px; height:1100px; transform:scale(0.18); transform-origin: top left; border:none;"
+                scrolling="no">
+              </iframe>
+            </div>
+          </div>
+          </a>
+          <a href="cv_template 1.html"  >
+          <div class="cv-preview">
+            <div style="width:150px; height:200px; overflow:hidden; border-radius:10px; border:2px solid black;">
+              <iframe 
+                src="cv_template 1.html" 
+                style="width:800px; height:1100px; transform:scale(0.18); transform-origin: top left; border:none;"
+                scrolling="no">
+              </iframe>
+            </div>
+          </div>
+          </a>
+          <a href="cv_template 2.html"  >
+          <div class="cv-preview">
+            <div style="width:150px; height:200px; overflow:hidden; border-radius:10px; border:2px solid black;">
+              <iframe 
+                src="cv_template 2.html"
+                style="width:800px; height:1100px; transform:scale(0.18); transform-origin: top left; border:none;"
+                scrolling="no">
+              </iframe>
+            </div>
+          </div>
+          </a>
+          <a href="cv_template 3.html">
+          <div class="cv-preview">
+            <div style="width:150px; height:200px; overflow:hidden; border-radius:10px; border:2px solid black;">
+              <iframe 
+                src="cv_template 3.html"
+                style="width:800px; height:1100px; transform:scale(0.18); transform-origin: top left; border:none;"
+                scrolling="no">
+              </iframe>
+            </div>
+          </div>
+          </a>
+          <a href="cv_template 4.html">
+          <div class="cv-preview">
+            <div style="width:150px; height:200px; overflow:hidden; border-radius:10px; border:2px solid black;">
+              <iframe 
+                src="cv_template 4.html"
+                style="width:800px; height:1100px; transform:scale(0.18); transform-origin: top left; border:none;"
+                scrolling="no">
+              </iframe>
+            </div>
+          </div>
+          </a>
+          <a href="cv_template 5.html">
+          <div class="cv-preview">
+            <div style="width:150px; height:200px; overflow:hidden; border-radius:10px; border:2px solid black;">
+              <iframe 
+                src="cv_template 5.html" 
+                style="width:800px; height:1100px; transform:scale(0.18); transform-origin: top left; border:none;"
+                scrolling="no">
+              </iframe>
+            </div>
+          </div>
+          </a>
+          <a href="cv_template 6.html">
+          <div class="cv-preview">
+            <div style="width:150px; height:200px; overflow:hidden; border-radius:10px; border:2px solid black;">
+              <iframe 
+                src="cv_template 6.html"
+                style="width:800px; height:1100px; transform:scale(0.18); transform-origin: top left; border:none;"
+                scrolling="no">
+              </iframe>
+            </div>
+          </div>
+          </a>
+          <a href="cv_template 7.html">
+          <div class="cv-preview">
+            <div style="width:150px; height:200px; overflow:hidden; border-radius:10px; border:2px solid black;">
+              <iframe 
+                src="cv_template 7.html"
+                style="width:800px; height:1100px; transform:scale(0.18); transform-origin: top left; border:none;"
+                scrolling="no">
+              </iframe>
+            </div>
+          </div>
+          </a>
+          <a href="cv_template 8.html">
+          <div class="cv-preview">
+            <div style="width:150px; height:200px; overflow:hidden; border-radius:10px; border:2px solid black;">
+              <iframe 
+                src="cv_template 8.html"
+                style="width:800px; height:1100px; transform:scale(0.18); transform-origin: top left; border:none;"
+                scrolling="no">
+              </iframe>
+            </div>
+          </div>
+          </a>
+          <a href="cv_template 9.html">
+          <div class="cv-preview">
+            <div style="width:150px; height:200px; overflow:hidden; border-radius:10px; border:2px solid black;">
+              <iframe 
+                src="cv_template 9.html"
+                style="width:800px; height:1100px; transform:scale(0.18); transform-origin: top left; border:none;"
+                scrolling="no">
+              </iframe>
+            </div>
+          </div>
+          </a>
+          <a href="cv_template 10.html">
+          <div class="cv-preview">
+            <div style="width:150px; height:200px; overflow:hidden; border-radius:10px; border:2px solid black;">
+              <iframe 
+                src="cv_template 10.html"
+                style="width:800px; height:1100px; transform:scale(0.18); transform-origin: top left; border:none;"
+                scrolling="no">
+              </iframe>
+            </div>
+          </div>
+          </a>
+    </div>
+
+</body>
+</html>

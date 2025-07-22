@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Design</title>
+    <style>
+        body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card {
+  background-color: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #1976d2;
+}
+#cvPhoto{
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+#intro{
+  font-weight: bolder;
+  font-style: italic;
+  font-size:50px;
+  margin: 10px 0;
+}
+#headerInfo{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#headerInfo p{
+  margin: 4px 0;
+  font-size: 16px;
+  text-align: center;
+}
+#photoContainer{
+  margin-left: 30px;
+}
+#print {
+  margin: 30px auto;
+  display: block;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+    </style>
+    
+</head>
+<body>
+<div class="cv-container">
+  <div class="header">
+    <div id="headerInfo"><h1 id="intro">Your Name</h1>
+    <p id="cvEmail">📧 Email</p>
+    <p id="cvPhone">📞 Phone</p>
+    <p id="address">🏠 Address</p>
+  </div>
+<div id="photoContainer"><img src="" alt="Upload Your Photo" id="cvPhoto"></div>
+</div>
+
+  <div class="card" id="careerObjective">
+    <h2>🎯 Career Objective</h2>
+    <p id="cvCareerObjective"></p>
+  </div>
+
+  <div class="card" id="education">
+    <h2>📘 Education</h2>
+   <ul id="cvEducation"></ul>
+        <ul>
+        <li id="class12"><b>Intermediate</b> (Year) - Institution Name</li>
+        <li id="class10"><b>High School</b> (Year) - Institution Name</li>
+        </ul>
+  </div>
+
+  <div class="card" id="skills">
+    <h2>🛠️ Skills</h2>
+    <p id="cvSkills"></p>
+  </div>
+
+  <div class="card" id="experience">
+    <h2>💼 Experience</h2>
+    <p id="cvExperience"></p>
+  </div>
+  <section hidden>
+      <h2>🎓 Field</h2>
+      <p id="cvField"></p>
+    </section>
+
+  <div class="card" id="personal">
+    <h2>👤 Personal Details</h2>
+    <p id="cvDob"></p>
+    <p id="cvFather"></p>
+    <p id="cvCountry"></p>
+    <p id="cvState"></p>
+    <p id="cvlang"></p>
+    <p id="cvMarital"></p>
+  </div>
+</div>
+
+<button id="print" onclick="window.print()">🖨 Print / 📩 Download PDF</button>
+
+<script src="cvScript.js"></script>
+      
+</body>
+</html>

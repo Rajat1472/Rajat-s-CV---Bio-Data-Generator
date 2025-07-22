@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Design</title>
+    <style>
+       body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.cv-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.cv-left {
+  width: 30%;
+  background-color: #2c3e50;
+  color: white;
+  padding: 30px 20px;
+}
+
+.cv-left h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+}
+
+.cv-left p {
+  margin: 10px 0;
+}
+
+.cv-right {
+  width: 70%;
+  background-color: #f4f4f4;
+  padding: 40px;
+}
+
+.cv-right section {
+  margin-bottom: 30px;
+  background-color: white;
+  padding: 20px;
+  border-left: 5px solid #3498db;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.cv-right h2 {
+  color: #34495e;
+  margin-top: 0;
+}
+#photoContainer{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#photoContainer img{
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+
+}
+#print {
+  margin: 30px auto;
+  display: block;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+</style>
+    
+</head>
+<body>
+
+    <div class="cv-wrapper">
+  <div class="cv-left">
+    <div id="photoContainer"><img  id="cvPhoto" src="" alt="Upload your photo"></div>
+    <h1 id="intro">Your Name</h1>
+    <p id="cvPhone">📞 Phone</p>
+    <p id="cvEmail">📧 Email</p>
+    <p id="address">🏠 Address</p>
+    <p id="cvDob">DOB</p>
+    <p id="cvFather">Father's Name</p>
+    <p id="cvCountry">Country</p>
+    <p id="cvState">State</p>
+    <p id="cvlang">Languages</p>
+    <p id="cvMarital">Marital Status</p>
+  </div>
+
+  <div class="cv-right">
+    <section>
+      <h2>🎯 Career Objective</h2>
+      <p id="cvCareerObjective"></p>
+    </section>
+
+    <section>
+      <h2>📚 Education</h2>
+     <ul id="cvEducation"></ul>
+        <ul>
+        <li id="class12"><b>Intermediate</b> (Year) - Institution Name</li>
+        <li id="class10"><b>High School</b> (Year) - Institution Name</li>
+        </ul>
+    </section>
+
+    <section>
+      <h2>🛠️ Skills</h2>
+      <p id="cvSkills"></p>
+    </section>
+
+    <section>
+      <h2>💼 Experience</h2>
+      <p id="cvExperience"></p>
+    </section>
+
+    <section>
+      <h2>🎓 Field</h2>
+      <p id="cvField"></p>
+    </section>
+  </div>
+</div>
+
+<button id="print" onclick="window.print()">🖨 Print / 📩 Download PDF</button>
+
+<script src="cvScript.js"></script>
+      
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        
+        background-repeat: no-repeat;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        min-height: 100vh;
+        background: transparent;
+    }
+    #Details{
+        font-size: x-large;
+        font-weight: bolder;
+        line-height: 35px;
+        color: ivory;
+        background-image: url("https://i.postimg.cc/X7PLkx3c/899890fa-6701-48ea-a9c2-241e1b1e0528.jpg");
+        background-repeat: no-repeat;
+        flex-direction: column;
+        justify-content: start;
+        background-size: 794px 1123px;
+        padding-top: 100px;
+        width: 794px;
+        height: 1123px;
+        margin-top: 20px;
+        }
+    #bio_data{
+        text-align: center;
+    }
+    #Personal{
+        text-align: center;
+    }
+    #Family{
+        text-align: center;
+    }
+    #personalInfo{
+        display: flex;
+        
+    }
+    #FamilyInfo span {
+  display: inline-block;
+  max-width: 300px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  vertical-align: top;
+}
+    #photo{
+        height: 120px;
+        width: 100px;
+        border: 2px solid black;
+        object-fit: cover;
+    }
+   
+</style>
+<link rel="stylesheet" href="print-btn.css">
+<body>
+    
+    <div id="Details">
+        <h1 id="bio_data">Bio-Data</h1>
+        <h2 id="Personal">Personal Details</h2>
+        <div id="personalInfo">
+        <pre>
+        Name               :            <span id="name">XYZ</span>
+        Religion           :            <span id="Religion">XYZ</span>
+        Caste              :            <span id="Caste">XYZ</span>
+        Complexion         :            <span id="Complexion">XYZ</span> 
+        Date of Birth      :            <span id="DOB">DD/MM/YYYY</span>
+        Place of Birth     :            <span id="birth_place">Place of Birth</span>
+        Education          :            <span id="Education">Education</span>
+        Height             :            <span id="Height">Height</span>
+        Occupation         :            <span id="occupation">Occupation</span>
+        Salary             :            <span id="Salary">Salary</span>
+        </pre>
+        <img src="" alt="Your Photo" id="photo">
+        </div>
+        <h2 id="Family">Family Information</h2>
+        <pre id="FamilyInfo">
+        Father's Name      :            <span id="fname">XYZ</span>
+        Mother's Name      :            <span id="Mname">XYZ</span>
+        Contact            :            <span id="Contact">Contact</span>
+        Occupation         :            <span id="Occupation">Occupation</span>
+        Number Of Sisters  :            <span id="Number of Sisters">Number of Sisters</span>
+        Number Of Brothers :            <span id="Number of Brothers">Number of Brothers</span>
+        Address            :            <span id="Address">Address</span>
+        </pre>
+<button id="print" onclick="window.print()">🖨 Print / 📩 Download PDF</button>
+    </div>
+    <script src="bio_dataScript.js"></script>  
+</body>
+</html>

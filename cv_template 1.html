@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.container{
+    display: flex;
+}
+.slidebar{
+    width:30%;
+    background-color: darkblue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.main{
+    width: 70%;
+    padding: 30px;
+    background-color:white;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(249, 245, 245);
+}
+h1{
+    margin-bottom: 10px;
+}
+h3{
+    margin-top: 20px;
+}
+ul{
+    padding-left: 20px;
+}
+img {
+    width: 120px; /* ya jitna chaho */
+    height: auto;
+    border-radius: 10px; /* halka round look, ya 0 for full rectangle */
+    border: 2px solid black;
+    display: block;
+    margin: 20px auto; /* Center horizontally */
+}
+#pic{
+    padding-left: 0;
+    margin-left: 0;
+    text-align: center;
+}
+#Contact{
+    padding-left: 20px;
+    margin-left: 20px;
+}
+#email{
+    padding-left: 20px;
+    margin-left: 20px;
+}
+#print {
+  margin: 30px auto;
+  display: block;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+</style>
+<body>
+<div class="container">
+    <div class="slidebar">
+       <img id="cvPhoto" alt="Your Photo"><br>
+        <p id="cvPhone"> Contact</p>
+        <p id="cvEmail">Email</p>
+        <p id="address">🏠 Address: Your Address Here</p>
+    </div>
+<div class="main">
+<h1 id="intro"> Name </h1>    
+<h3>Career Objective</h3>
+    <p id="cvField">Feild of CV</p>
+    <p id="cvCareerObjective">Dedicated and detail-oriented Data Entry Operator with three years of experience in handling and managing data efficiently. Looking for an opportunity to leverage my skills in a dynamic work environment while contributing to the organization’s success.</p>
+    <h3>Education</h3>
+        <ul id="cvEducation"></ul>
+        <ul>
+        <li id="class12"><b>Intermediate</b> (Year) - Institution Name</li>
+        <li id="class10"><b>High School</b> (Year) - Institution Name</li>
+        </ul>
+    <h3>Skills</h3>
+    
+    <ul id="cvSkills">Skills</ul> 
+    
+    <h3>Personal Details</h3>
+    <ul>
+        <li id="cvDob"><b>Date of Birth:</b> DD/MM/YYYY</li>
+        <li id="cvFather"><b>Father's Name:</b> XYZ</li>
+        <li id="cvCountry"><b>Nationality:</b> Indian</li>
+        <li id="cvState"><b>State:</b> Uttar Pradesh.</li>
+        <li id="cvMarital"><b>Marital Status:</b> Single/Married</li>
+        <li id="cvlang"><b>Languages Known:</b> Hindi, English</li>
+        <li id="cvExperience"><b>Experience:</b>Fresher.</li>
+    </ul>
+    <h3>Declaration</h3>
+    <p>I hereby declare that the above information is true to the best of my knowledge and belief.</p>
+    <p><b>Signature:</b> ___________</p>
+</div>    
+</div>
+
+<button id="print" onclick="window.print()">🖨 Print / 📩 Download PDF</button>
+
+<script src="cvScript.js"></script>
+</body>
+</html>

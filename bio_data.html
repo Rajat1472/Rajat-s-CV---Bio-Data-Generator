@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio data Form</title>
+
+    <style>
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, cyan, blue);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        form
+        {
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+            }
+            input,select{
+            width: 100%;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+            input[type="submit"]{
+                background: gold;
+                color: white;
+                cursor: pointer;
+                font-size: 20px;
+            }
+            input[type="submit"]:hover{
+                background: purple;
+            }
+           
+    #preview {
+        display: none;
+        width: 100px;
+        height: 120px;
+        object-fit: cover;
+        border: 2px solid black;
+        
+    }
+    .add-btn {
+    background-color: darkgreen;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 5px;
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: seagreen;
+}
+    </style>
+</head>
+<body>
+    <h1>Welcome to Bio Data Form</h1>
+<p>Kindly Fill the follwing details required.</p> 
+<form onsubmit="saveData(event)">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required><br><br>
+<label for="fname">Father's Name</label>
+<input type="text" id="fname" name="Fathers Name" required><br><br>
+<label for="Mname">Mother's Name</label>
+<input type="text" id="Mname" name="Mothers Name" required><br><br>
+<label for="Religion">Religion</label>
+<input type="text" id="Religion" name="Religion" required><br><br>
+<label for="Caste">Caste</label>
+<input type="text" id="Caste" name="Caste" required><br><br>
+<label for="Complexion">Complexion</label>
+<input type="text" id="Complexion" name="Complexion" required><br><br>
+<label for="Contact">Contact Number</label>
+<input type="number" id="Contact" name="Contact" required><br><br>
+<label for="Height">Height</label>
+<input type="text" id="Height" name="Height" required><br><br>
+<label for="dob">Date of Birth</label>
+<input type="date" id="dob" name="dob" required><br><br>
+<label for="Salary">Salary:</label>
+<input type="text" id="Salary" name="Salary" required><br><br>
+<label>Total Sisters:</label>
+<input type="number" id="totalSisters">
+<label>Married Sisters:</label>
+<input type="number" id="marriedSisters">
+<label>Total Brothers:</label>
+<input type="number" id="totalBrothers">
+<label>Married Brothers:</label>
+<input type="number" id="marriedBrothers">
+<label for="Country">Country</label><br><br>
+<input list="countries" id="country" name="country" required>
+<datalist id="countries">
+    <option value="Afghanistan">
+    <option value="Albania">
+    <option value="Algeria">
+    <option value="Andorra">
+    <option value="Angola">
+    <option value="Argentina">
+    <option value="Armenia">
+    <option value="Australia">
+    <option value="Austria">
+    <option value="Azerbaijan">
+    <option value="Bahamas">
+    <option value="Bahrain">
+    <option value="Bangladesh">
+    <option value="Barbados">
+    <option value="Belarus">
+    <option value="Belgium">
+    <option value="Bhutan">
+    <option value="Bolivia">
+    <option value="Brazil">
+    <option value="Bulgaria">
+    <option value="Canada">
+    <option value="China">
+    <option value="Colombia">
+    <option value="Croatia">
+    <option value="Cuba">
+    <option value="Denmark">
+    <option value="Egypt">
+    <option value="Finland">
+    <option value="France">
+    <option value="Germany">
+    <option value="Greece">
+    <option value="Hungary">
+    <option value="Iceland">
+    <option value="India">
+    <option value="Indonesia">
+    <option value="Iran">
+    <option value="Iraq">
+    <option value="Ireland">
+    <option value="Israel">
+    <option value="Italy">
+    <option value="Jamaica">
+    <option value="Japan">
+    <option value="Kazakhstan">
+    <option value="Kenya">
+    <option value="Malaysia">
+    <option value="Mexico">
+    <option value="Nepal">
+    <option value="Netherlands">
+    <option value="New Zealand">
+    <option value="Nigeria">
+    <option value="North Korea">
+    <option value="Norway">
+    <option value="Pakistan">
+    <option value="Peru">
+    <option value="Philippines">
+    <option value="Poland">
+    <option value="Portugal">
+    <option value="Qatar">
+    <option value="Russia">
+    <option value="Saudi Arabia">
+    <option value="South Africa">
+    <option value="South Korea">
+    <option value="Spain">
+    <option value="Sri Lanka">
+    <option value="Sweden">
+    <option value="Switzerland">
+    <option value="Thailand">
+    <option value="Turkey">
+    <option value="United Arab Emirates">
+    <option value="United Kingdom">
+    <option value="United States">
+    <option value="Vietnam">
+    <option value="Zimbabwe">
+</datalist><br>
+<label for="state">State</label>
+<input list="states" id="state" name="state" required>
+
+<datalist id="states">
+    <option value="Andhra Pradesh">
+    <option value="Arunachal Pradesh">
+    <option value="Assam">
+    <option value="Bihar">
+    <option value="Chhattisgarh">
+    <option value="Goa">
+    <option value="Gujarat">
+    <option value="Haryana">
+    <option value="Himachal Pradesh">
+    <option value="Jharkhand">
+    <option value="Karnataka">
+    <option value="Kerala">
+    <option value="Madhya Pradesh">
+    <option value="Maharashtra">
+    <option value="Manipur">
+    <option value="Meghalaya">
+    <option value="Mizoram">
+    <option value="Nagaland">
+    <option value="Odisha">
+    <option value="Punjab">
+    <option value="Rajasthan">
+    <option value="Sikkim">
+    <option value="Tamil Nadu">
+    <option value="Telangana">
+    <option value="Tripura">
+    <option value="Uttar Pradesh">
+    <option value="Uttarakhand">
+    <option value="West Bengal">
+    
+    <!-- Union Territories -->
+    <option value="Andaman and Nicobar Islands">
+    <option value="Chandigarh">
+    <option value="Dadra and Nagar Haveli and Daman and Diu">
+    <option value="Lakshadweep">
+    <option value="Delhi">
+    <option value="Puducherry">
+    <option value="Ladakh">
+    <option value="Jammu and Kashmir">
+</datalist>
+
+<label for="Address">House Number</label><br><br>
+<input type="text" id="Address" name="Address" required><br><br>
+<label for="birth_place">Place of Birth</label><br><br>
+<input type="text" id="birth_place" name="birth_place" required><br><br>
+<div id="educationContainer">
+<label for="Education">Education</label><br><br>
+<input type="text" id="Education"  name="Education"required><br><br>
+<button type="button" class="add-btn" onclick="addEducation()">Add any other courses</button><br><br>
+</div>
+<label for="occupation">Occupation</label><br><br>
+<input type="text" id="occupation" name="Occupation"required><br><br>
+<label for="photo"> Upload Your Photo</label>
+<input type="file" id="photo">
+<img id="preview" src="" alt="Image preview">
+<input type="submit"value="submit">
+
+</form>
+<script>
+    const photoInput=document.getElementById("photo");
+    const reader=new FileReader();
+    const preview = document.getElementById("preview");
+    photoInput.addEventListener('change', function(){
+        const file=this.files[0];
+        if(file){
+            reader.readAsDataURL(file);
+            reader.onload=function(){
+                console.log('image preview url:',reader.result);
+                preview.src=reader.result;
+                preview.style.display="block";
+                localStorage.setItem("photo",reader.result)
+            };
+        }
+    });
+    
+    function saveData(event){
+        event.preventDefault();
+        const totalSisters=document.getElementById("totalSisters").value;
+    const marriedSisters=document.getElementById("marriedSisters").value;
+    const totalBrothers=document.getElementById("totalBrothers").value;
+    const marriedBrothers=document.getElementById("marriedBrothers").value;
+    const SistersInfo=`${marriedSisters}/${totalSisters} married`;
+    const BrothersInfo=`${marriedBrothers}/${totalBrothers} married`;
+        const Data={
+            name:document.getElementById("name").value,
+            fname:document.getElementById('fname').value,
+            Mname:document.getElementById('Mname').value,
+            Complexion:document.getElementById('Complexion').value,
+            Height:document.getElementById('Height').value,
+            Religion:document.getElementById('Religion').value,
+            Caste:document.getElementById('Caste').value,
+            Contact:document.getElementById('Contact').value,
+            dob:document.getElementById('dob').value,
+            Salary:document.getElementById('Salary').value,
+            country: document.getElementById("country").value,
+            state: document.getElementById("state").value,
+            birth_place: document.getElementById("birth_place").value,
+            Education: Array.from(document.getElementsByName("Education")).map(input => input.value),
+            occupation: document.getElementById("occupation").value,
+            Address: document.getElementById("Address").value,
+            Sisters:SistersInfo,
+            Brothers:BrothersInfo,
+            photo:preview.src
+              
+    };
+    localStorage.setItem("bioData",JSON.stringify(Data))
+    window.location.href="bioDataDemo.html";
+    }
+    function addEducation(){
+                let wrapper=document.createElement("div");
+                wrapper.style.display = "flex";
+                wrapper.style.alignItems = "center";
+                wrapper.style.gap = "10px";
+                wrapper.style.marginTop = "5px"; // ya marginBottom
+
+                let newEducation=document.createElement("input");
+                newEducation.type="Text";
+                newEducation.name="Education";
+                newEducation.placeholder="Enter any other Courses";
+                let rembtn=document.createElement("button");
+                rembtn.type="button";
+                rembtn.onclick=function(){wrapper.remove()};
+                rembtn.textContent = "❌ Remove";
+                rembtn.style.display="inline-flex";
+                rembtn.style.backgroundColor = "crimson";
+                rembtn.style.color = "white";
+                rembtn.style.border = "none";
+                rembtn.style.padding = "5px 10px";
+                rembtn.style.borderRadius = "5px";
+                rembtn.style.cursor = "pointer";
+                rembtn.style.whiteSpace = "nowrap";
+                wrapper.appendChild(newEducation);
+                wrapper.appendChild(rembtn);
+                document.getElementById("educationContainer").appendChild(wrapper);
+}
+</script> 
+<script src="bio_dataScript.js"></script>  
+</body>
+</html>

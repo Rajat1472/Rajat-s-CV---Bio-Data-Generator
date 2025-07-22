@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Design</title>
+    <style>
+      /* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fa;
+  padding: 40px 10px;
+  color: #212529;
+}
+
+/* CV Container */
+.cv-container {
+  max-width: 950px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 30px 40px;
+}
+
+/* Header Section */
+.cv-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+#photoContainer {
+  width: 140px;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 3px solid #ced4da;
+}
+
+#photoContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.name-title h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.name-title p {
+  font-size: 18px;
+  color: #495057;
+  
+}
+
+/* Sections */
+.cv-section {
+  margin-bottom: 28px;
+}
+
+.cv-section h2 {
+  font-size: 20px;
+  color: #0077b6;
+  border-bottom: 1px solid #adb5bd;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.cv-section p,
+.cv-section ul {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.cv-section ul {
+  list-style: none;
+}
+
+.cv-section ul li::before {
+  content: "▹";
+  color: #0077b6;
+  margin-right: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cv-header {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .photo-rect {
+    margin-bottom: 20px;
+  }
+}
+#print {
+  margin: 30px auto;
+  display: block;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#print:hover {
+  background-color: #005f86;
+}
+
+
+    </style>
+    
+</head>
+<body>
+<div class="cv-container">
+  <header class="cv-header">
+   <div class="name-title">
+      <h1 id="intro">Your Name</h1>
+      <section hidden><p id="cvField">Your Profession</p></section>
+    </div>
+    <div id="photoContainer"><img src="" alt="" id="cvPhoto"></div>
+  </header>
+
+  <section class="cv-section">
+    <h2>Contact</h2>
+    <ul>
+      <li id="cvEmail">your@email.com</li>
+      <li id="cvPhone">+91 9876543210</li>
+      <li id="address">Your Address</li>
+    </ul>
+  </section>
+
+  <section class="cv-section">
+    <h2>Career Objective</h2>
+    <p id="cvCareerObjective">Write your career objective here.</p>
+  </section>
+
+  <section class="cv-section">
+    <h2>Education</h2>
+    <ul id="cvEducation"></ul>
+        <ul>
+        <li id="class12"><b>Intermediate</b> (Year) - Institution Name</li>
+        <li id="class10"><b>High School</b> (Year) - Institution Name</li>
+        </ul>
+  </section>
+
+  <section class="cv-section">
+    <h2>Experience</h2>
+    <p id="cvExperience">Fresher / Work Experience</p>
+  </section>
+
+  <section class="cv-section">
+    <h2>Skills</h2>
+    <p id="cvSkills">Skill1, Skill2, Skill3...</p>
+  </section>
+
+  <section class="cv-section">
+    <h2>Personal Info</h2>
+    <ul>
+      <li id="cvDob">DOB: DD/MM/YYYY</li>
+      <li id="cvFather">Father's Name: XYZ</li>
+      <li id="cvMarital">Marital Status: Single</li>
+      <li id="cvlang">Languages: English, Hindi</li>
+      <li id="cvCountry">Country: India</li>
+      <li id="cvState">State: Your State</li>
+    </ul>
+  </section>
+</div>
+<button id="print" onclick="window.print()">🖨 Print / 📩 Download PDF</button>
+<script src="cvScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+
+    let cvData={};
+document.addEventListener("DOMContentLoaded", function () {
+    let storedData = localStorage.getItem("cvData");
+
+    if (storedData) {
+        cvData = JSON.parse(storedData);
+
+        document.getElementById("intro").innerText = cvData.name || "Your Name";
+        document.getElementById("cvPhone").innerText = "📞 " + (cvData.phone || "Your Phone");
+        document.getElementById("cvEmail").innerText = "📧 " + (cvData.email || "Your Email");
+        document.getElementById("class12").innerText = "Intermediate from " + (cvData.class12 || "Your School");
+        document.getElementById("class10").innerText = "High School from " + (cvData.class10 || "Your School");
+        document.getElementById("address").innerText = `🏠 Address: ${cvData.house || "Your Address Here"}`;
+        document.getElementById("cvDob").innerText = "Date of Birth: " + (cvData.dob || "DD/MM/YYYY");
+        document.getElementById("cvFather").innerText = "Father's Name: " + (cvData.fname || "XYZ");
+        document.getElementById("cvField").innerText = cvData.field || "Field of Study";
+        document.getElementById("cvCountry").innerText ="Country: "+ cvData.country || "India";
+        document.getElementById("cvState").innerText ="State: "+ cvData.state || "State Name";
+        document.getElementById("cvlang").innerText="Languages Known: "+cvData.lang|| "Languages Known";
+        document.getElementById("cvMarital").innerText="Marital Status: "+cvData.Marital|| "Marital Status";
+        let careerObjectives = {
+            "IT":
+"As an aspiring IT professional, I aim to leverage my technical skills and innovative problem-solving abilities to contribute to the growth of the organization. I am eager to work on challenging projects that enable me to enhance my knowledge of software development, networking, and system management. I strive to stay updated with the latest technological advancements and implement them effectively in my work. I am committed to building efficient, scalable, and secure systems. My goal is to grow in the IT industry while delivering high-quality results.",
+
+"Engineering":
+"As a passionate engineering professional, I am eager to apply my knowledge and skills to solve real-world problems and contribute to technological advancements. I aim to work in an organization that allows me to grow both professionally and personally, while tackling challenges in design, construction, or systems engineering. My commitment to precision, innovation, and quality drives me to deliver the best results. I aim to work on cutting-edge projects that contribute to the growth of the organization and enhance my engineering expertise.",
+
+"Medical":
+"With a deep commitment to healthcare, I aspire to contribute to the medical field by providing high-quality patient care and services. My goal is to leverage my medical knowledge, compassionate nature, and attention to detail to make a positive difference in patients’ lives. I aim to work in a challenging and rewarding environment that fosters my growth as a healthcare professional. I am dedicated to staying updated with the latest medical research and practices to provide the best care. My ultimate objective is to improve healthcare outcomes and enhance patient well-being.",
+
+"Education":
+"As an educator, my mission is to inspire, educate, and empower students to achieve their full potential. I aim to create a positive learning environment that encourages critical thinking, creativity, and intellectual curiosity. My goal is to contribute to the educational development of students while continuously improving my teaching methods and techniques. I strive to cultivate a love for learning and make education accessible to all. I am dedicated to providing high-quality education that shapes the leaders of tomorrow.",
+
+"Finance":
+"My objective is to build a successful career in finance by utilizing my analytical skills, attention to detail, and passion for numbers. I am committed to developing strategies that drive financial growth and minimize risks for the organization. My goal is to contribute to the success of the financial team while growing in my expertise in areas such as financial analysis, accounting, and investment strategies. I seek to work in a dynamic environment that offers continuous learning opportunities and helps me build a strong foundation in finance.",
+
+"Marketing":
+"I am a result-oriented individual with a passion for marketing, and my goal is to contribute to the organization's growth by creating innovative marketing strategies. I am driven to develop effective campaigns that increase brand awareness, drive customer engagement, and enhance revenue. I seek a challenging role in a company that values creativity, strategic thinking, and analytical skills. I am committed to staying ahead of the trends in the ever-evolving marketing landscape, ensuring the company’s success in the marketplace.",
+
+"HR":
+"As an aspiring HR professional, I aim to build a rewarding career by contributing to the development of human capital in an organization. I am passionate about fostering a positive workplace culture, improving employee relations, and implementing effective HR policies. My goal is to enhance organizational performance by ensuring the recruitment of talented individuals and their continuous development. I am dedicated to creating an inclusive environment that promotes diversity, teamwork, and employee well-being.",
+
+"Design":
+"With a deep passion for creativity, I aspire to pursue a career in design where I can contribute to innovative and visually appealing solutions. My objective is to create user-friendly designs that enhance user experience while aligning with the brand’s vision. I am committed to mastering the latest design tools and technologies to stay ahead of trends. I aim to work with a dynamic team to bring fresh, unique ideas to life and contribute to the company’s success through creative solutions.",
+
+"Legal":
+"My objective is to build a successful legal career by providing sound legal advice and services to clients. I aim to work in a reputed organization where I can contribute to achieving positive outcomes through legal expertise and negotiation skills. I am committed to staying up-to-date with the latest developments in the law and ensuring compliance with legal regulations. I strive to offer strong legal representation and contribute to upholding justice while continuing to grow and specialize in my chosen field of law.",
+
+"Management":
+"As an aspiring management professional, I aim to contribute to the organization’s growth by applying my leadership and strategic thinking abilities. I am focused on developing innovative solutions, optimizing operational efficiency, and driving organizational success. My goal is to enhance team performance through effective management and collaboration. I seek a challenging role where I can utilize my problem-solving skills, drive results, and work with a team that values continuous improvement.",
+
+"Government":
+"My objective is to serve the nation by working in a government organization where I can use my skills to contribute to the country's development. I aim to implement efficient policies and solutions that improve public welfare and drive positive social change. I am committed to working with integrity, transparency, and dedication to ensure that the government’s services reach the people who need them the most. I seek a position where I can make a meaningful impact on society.",
+
+"Freelancing":
+"As a freelancer, my goal is to build long-term relationships with clients by providing high-quality and creative solutions. I am passionate about entrepreneurship and aim to create a sustainable business that offers innovative services to diverse clients. My objective is to continue learning, evolving, and growing my freelance career, offering tailored services that meet the unique needs of each client. I strive to provide value through professionalism, reliability, and top-tier expertise in my field.",
+
+
+        };
+
+        let selectedField = cvData.field && careerObjectives[cvData.field] ? cvData.field : "IT"; 
+        document.getElementById("cvCareerObjective").innerText = careerObjectives[selectedField];
+
+        if (cvData.experience) {
+            document.getElementById("cvExperience").innerText = `Company: ${cvData.experience.company}, Experience: ${cvData.experience.years} years`;
+        } else {
+            document.getElementById("cvExperience").innerText = "Experience: Fresher";
+        }
+        console.log("Field:", cvData.field);
+    }
+    let skillsContainer = document.getElementById("cvSkills");
+skillsContainer.innerHTML = "";
+
+if (Array.isArray(cvData.skills)) {
+    cvData.skills.forEach(skill => {
+        let li = document.createElement("li");
+        li.innerText = skill;
+        skillsContainer.appendChild(li);
+    });
+}
+let educationList = document.getElementById("cvEducation");
+educationList.innerHTML = "";
+
+if (Array.isArray(cvData.education)) {
+    cvData.education.forEach((edu, index) => {
+        let li = document.createElement("li");
+        li.innerText = edu;
+        educationList.appendChild(li);
+    });
+} 
+photoData=localStorage.getItem("cvPhoto");
+if(photoData){
+    document.getElementById("cvPhoto").src=photoData;
+}
+});
