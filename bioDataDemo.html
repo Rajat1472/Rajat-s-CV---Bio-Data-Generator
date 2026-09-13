@@ -5,41 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-      body{
-        background-color: blanchedalmond;
-      }
-        iframe{
-            width: 800px;
-            height: 1100px;
-            transform: scale(0.18);
-            transform-origin: top-left;
-            border: none;
-            pointer-events: none;
+* {
+    box-sizing: border-box;
+}
 
-        }
-        .cv-container{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .bioDataPreview{
-            width: 150px;
-            height: 200px;
-            border: 2px solid black;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .bioDataPreview:hover{
-            transform: scale(1.2);
-            box-shadow: 0 4px 12px rgba(0, 0, 0,0.2);
-        }
-        #bio_dataHeading{
-          text-align: center;
-          color: blue ;
-          font-size: xx-large;
-        }
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: blanchedalmond;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#bio_dataHeading {
+    text-align: center;
+    color: blue;
+    font-size: 32px;
+    margin: 10px 0 25px;
+}
+
+.cv-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.bioDataPreview {
+    width: 150px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bioDataPreview:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bioDataPreview > div {
+    width: 150px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.bioDataPreview iframe {
+    width: 800px;
+    height: 1100px;
+    transform: scale(0.18);
+    transform-origin: top left;
+    border: none;
+    pointer-events: none;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px 8px;
+    }
+
+    #bio_dataHeading {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .cv-container {
+        gap: 15px;
+    }
+
+    .bioDataPreview {
+        width: 140px;
+        height: 187px;
+    }
+
+    .bioDataPreview > div {
+        width: 140px;
+        height: 187px;
+    }
+
+    .bioDataPreview iframe {
+        transform: scale(0.168);
+    }
+}
+
+/* Very Small Mobile */
+@media (max-width: 350px) {
+
+    .cv-container {
+        gap: 10px;
+    }
+
+    .bioDataPreview {
+        width: 130px;
+        height: 173px;
+    }
+
+    .bioDataPreview > div {
+        width: 130px;
+        height: 173px;
+    }
+
+    .bioDataPreview iframe {
+        transform: scale(0.156);
+    }
+}
     </style>
 </head>
 <body>

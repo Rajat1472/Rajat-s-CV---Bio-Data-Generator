@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <style>
  
       body{
+        margin: 0;
         background-repeat: no-repeat;
         background-color: white;
         justify-content: center;
@@ -16,6 +17,7 @@
         display: flex;
         min-height: 100vh;
         background: transparent;
+        
         
     }
     #Details{
@@ -63,6 +65,16 @@
 
 #heading{
     padding-top: 0px;
+}
+@media (max-width: 600px) {
+    body {
+        transform: scale(0.45);
+        transform-origin: top left;
+        width: 222.22%;
+        min-height: auto;
+        
+        margin: 0;
+    }
 }
 
 </style>
